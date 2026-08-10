@@ -12,7 +12,7 @@
 #include <cstddef>
 #include <vector>
 #include <utility>
-#include <memory>
+#include <optional>
 #include <cassert>
 
 template <typename Key, typename T>
@@ -21,22 +21,21 @@ struct Node
 	using value_type = std::pair<const Key, T>;
 
 	Node(std::size_t level) : forward(level, nullptr) {}
-	Node(std::size_t level, const Key& k, const T& v) :
+	Node(std::size_t level, Key k, T v) :
 		forward(level, nullptr),
-		pointer{std::make_shared<value_type>(k, v)}
+		opt{std::in_place, std::move(k), std::move(v)}
 	{}
 
-	bool nil() const { return pointer.get() == nullptr; }
+	bool is_nil() const { return !static_cast<bool>(opt); }
 
-	value_type& pair() { return *pointer; }
-	const value_type& pair() const { return *pointer; }
-
-	const Key& key() const { return pair().first; }
-	T& value() { return pair().second; }
-	const T& value() const { return pair().second; }
+	value_type& pair() { return *opt; }
+	const value_type& pair() const { return *opt; }
+	const Key& key() const { return opt->first; }
+	T& value() { return opt->second; }
+	const T& value() const { return opt->second; }
 
 	std::vector<Node*> forward;
-	std::shared_ptr<value_type> pointer;
+	std::optional<value_type> opt;
 };
 
 template <typename Key, typename T>
@@ -55,6 +54,29 @@ public:
 	{
 		assert(max_lvl > 0);
 	}
+
+	friend void swap(Skiplist& lhs, Skiplist& rhs) noexcept
+	{
+		using std::swap;
+		swap(lhs.level, rhs.level);
+		swap(lhs.max_level, rhs.max_level);
+		swap(lhs.header, rhs.header);
+	}
+
+	Skiplist(const Skiplist& other) : max_level{other.max_level}
+	{
+		for (const auto& pair : other)
+		{
+			insert(pair.first, pair.second);
+		}
+	}
+
+	Skiplist& operator=(Skiplist other)
+	{
+		swap(*this, other);
+		return *this;
+	}
+
 	~Skiplist()
 	{
 		while (header)
@@ -90,10 +112,15 @@ public:
 		return SkiplistConstIterator<Key, T>{nullptr};
 	}
 
+	bool contains(const Key& search_key) const
+	{
+		return search(search_key) != nullptr;
+	}
+
 	Node<Key, T>* search(const Key& search_key)
 	{
 		Node<Key, T>* x = header;
-		for (std::size_t i = level; i > 1; --i)
+		for (std::size_t i = level; i >= 1; --i)
 		{
 			while (x->forward[i - 1] && x->forward[i - 1]->key() < search_key)
 			{
@@ -106,6 +133,10 @@ public:
 			return x;
 		}
 		return nullptr;
+	}
+	const Node<Key, T>* search(const Key& search_key) const
+	{
+		return const_cast<Skiplist*>(this)->search(search_key);
 	}
 
 	void insert(const Key& search_key, const T& new_value)
@@ -137,7 +168,7 @@ public:
 				level = new_level;
 			}
 			x = new Node<Key, T>{new_level, search_key, new_value};
-			for (std::size_t i = 1; i <= new_level; ++i)
+			for (std::size_t i = 1; i < new_level + 1; ++i)
 			{
 				x->forward[i - 1] = update[i - 1]->forward[i - 1];
 				update[i - 1]->forward[i - 1] = x;
@@ -145,7 +176,7 @@ public:
 		}
 	}
 
-	void erase(const Key& search_key)
+	bool erase(const Key& search_key)
 	{
 		std::vector<Node<Key, T>*> update(max_level, nullptr);
 		Node<Key, T>* x = header;
@@ -160,20 +191,22 @@ public:
 		x = x->forward[0];
 		if (x && x->key() == search_key)
 		{
-			for (std::size_t i = 1; i <= level; ++i)
+			for (std::size_t i = 0; i < level; ++i)
 			{
-				if (update[i - 1]->forward[i - 1] != x)
+				if (update[i]->forward[i] != x)
 				{
 					break;
 				}
-				update[i - 1]->forward[i - 1] = x->forward[i - 1];
+				update[i]->forward[i] = x->forward[i];
 			}
 			delete x;
-			while (level > 1 && header->forward[level] == nullptr)
+			while (level > 1 && header->forward[level - 1] == nullptr)
 			{
 				--level;
 			}
+			return true;
 		}
+		return false;
 	}
 private:
 	std::size_t random_level()
@@ -209,6 +242,10 @@ public:
 	{
 		return curr->pair();
 	}
+	typename Node<Key, T>::value_type* operator->() const
+	{
+		return &this->operator*();
+	}
 	friend bool operator==(const SkiplistIterator& lhs, const SkiplistIterator& rhs)
 	{
 		return lhs.curr == rhs.curr;
@@ -242,6 +279,10 @@ public:
 	const typename Node<Key, T>::value_type& operator*() const
 	{
 		return curr->pair();
+	}
+	const typename Node<Key, T>::value_type* operator->() const
+	{
+		return &this->operator*();
 	}
 	friend bool operator==(const SkiplistConstIterator& lhs, const SkiplistConstIterator& rhs)
 	{
