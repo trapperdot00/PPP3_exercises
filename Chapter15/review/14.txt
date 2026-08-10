@@ -1,0 +1,13 @@
+A reference cannot change its referred-to object, that is,
+it cannot refer to another object after it has been created.
+
+We use pointers instead of references when we want our
+'references' to be able to 'refer' to different objects, or
+to none at all.
+
+
+A named object has only a fixed amount of data, for example
+a struct only has space for data that is defined inside of it.
+
+We use pointers to be able to dynamically allocate different
+sizes of data at run-time.

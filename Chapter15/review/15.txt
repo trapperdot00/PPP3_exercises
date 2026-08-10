@@ -1,0 +1,9 @@
+A destructor is a member function that is called when an
+object reaches its end-of-lifetime:
+ - automatic objects: going out-of-scope
+ - static objects   : at the end of the program
+ - heap objects     : when using `delete` on them
+
+We can move our explicit resource-freeing operations inside
+destructors, so that objects deal with them implicitly.
+(RAII idiom)

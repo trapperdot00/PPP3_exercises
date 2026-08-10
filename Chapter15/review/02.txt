@@ -1,0 +1,4 @@
+- Code storage / Text storage
+- Static storage
+- Stack storage / Automatic storage
+- Heap / Free store

@@ -1,0 +1,3 @@
+A pointer can point to objects, other pointers, functions,
+member functions, static member functions, data members,
+static data members,

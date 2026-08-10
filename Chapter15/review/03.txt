@@ -1,0 +1,32 @@
+The free store is unused memory that can be
+allocated by programs at run-time.
+
+The free store is also called the heap.
+
+To allocate and construct objects on the heap
+in one operation, one could use:
+ - new   for singular objects
+ - new[] for arrays of objects
+
+To allocate raw, uninitialized memory on the heap,
+one could use:
+ - operator new
+ - operator new[]
+ - malloc
+ - calloc
+
+To construct objects in uninitialized memory:
+ - placement new
+
+To destroy and deallocate objects from the heap
+in one operation, one could use:
+ - delete   for singular objects
+ - delete[] for arrays of objects
+
+To destroy objects, call their destructors explicitly.
+
+To deallocate already destroyed objects from the heap,
+one could use:
+ - operator delete
+ - operator delete[]
+ - free

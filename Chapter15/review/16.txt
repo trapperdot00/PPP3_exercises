@@ -1,0 +1,2 @@
+We want a virtual destructor when we want to use our class
+as a base class for derived types.

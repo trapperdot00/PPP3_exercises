@@ -1,0 +1,2 @@
+Destructors for members are called in reverse order of their
+declarations.

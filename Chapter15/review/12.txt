@@ -1,0 +1,3 @@
+We can initialize a pointer by the null-pointer constant,
+`nullptr`, `NULL` (bad habit), or 0 (really bad);
+or by an address.

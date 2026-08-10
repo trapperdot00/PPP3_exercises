@@ -1,0 +1,7 @@
+We access a member of a class through a pointer by using the
+arrow operator, or first dereferencing the pointer, then
+accessing the member with the dot-operator:
+
+Accessing `value` through `p`:
+ 1. `p->value`
+ 2. `(*p).value`

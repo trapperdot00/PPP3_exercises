@@ -1,0 +1,4 @@
+A resource is anything that we need to acquire, then give
+back / release.
+
+For example, resources can be memory, files, buffers.

@@ -1,0 +1,4 @@
+A pointer knows the type of its pointed-to type, and its
+size in bytes.
+
+Pointers to array types don't know their sizes.

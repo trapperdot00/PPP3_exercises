@@ -1,0 +1,10 @@
+A null-pointer is a pointer that doesn't (yet) point to
+anything.
+
+We can check whether a pointer is valid (not null) by
+putting it inside the condition of an if-statement.
+
+We use null pointers when we have pointers that don't always
+have objects to point to.
+
+Dereferencing a null-pointer is invalid.

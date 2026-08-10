@@ -1,0 +1,5 @@
+The `this` pointer is accessible in member functions, and
+refers to the current object.
+
+We need to use it when we want to use the memory address of
+the current object.

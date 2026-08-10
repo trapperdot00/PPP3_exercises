@@ -1,0 +1,1 @@
+A pointer is a type that holds memory addresses.

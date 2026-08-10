@@ -1,0 +1,13 @@
+A double-linked list is a data structure in which nodes know
+about their previous and successor nodes.
+
+Nodes use pointers to point to the other nodes, these
+pointers are null if they don't have nodes to refer to.
+(e.g.: the last node's successor pointer is null;
+       the first node's previous pointer is null)
+
+We can traverse a doubly-linked list in both ways,
+bidirectionally: either in order, or in reverse.
+
+A (doubly-)linked list is preferred when we need iterator
+stability for insertion and deletion of unrelated elements.

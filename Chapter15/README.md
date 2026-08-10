@@ -104,7 +104,7 @@ What is an address?
 How are memory addresses manipulated in C++?
 
 ## [Review 7](review/07.txt)
-What information about a pointerd-to object does a pointer have?
+What information about a pointer-to object does a pointer have?
 What useful information does it lack?
 
 ## [Review 8](review/08.txt)

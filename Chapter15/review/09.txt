@@ -1,0 +1,2 @@
+A memory-leak happens when the program doesn't free unused
+memory after it has been used.

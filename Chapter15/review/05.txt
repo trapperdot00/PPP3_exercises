@@ -1,0 +1,5 @@
+A dereference operator accesses a pointer's
+pointed-to object.
+
+It is necessary to have one, holding memory addresses
+alone isn't that fun.

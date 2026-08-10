@@ -1,0 +1,19 @@
+An address is a number that indicates a location in the
+memory.
+
+In C++, memory addresses can be retrieved from already
+existing objects using the address-of operator (unary &), or
+- for types that overload operator& - by using
+`std::addressof()`.
+
+Furthermore, allocating memory on the heap also yield memory
+addresses.
+
+We can use pointer-arithmetic on memory addresses,
+that is, we can iterate over contiguous arrays of objects
+just by taking the address of one of the elements, and
+adding or subtracting an integer value from it.
+
+We can also determine the distance of two elements in a
+contiguous array by subtracting their addresses from each
+other, which yields a signed integer.
