@@ -82,6 +82,73 @@ Copy the values from the array pointed to by `p1` into the array pointed to by `
 Repeat 10-12 using a `vector` rather than an array.
 
 
+## [Review 1](review/01.txt)
+Why do we need data structures with varying numbers of elements?
+
+## [Review 2](review/02.txt)
+What four kinds of storage do we have for a typical program?
+
+## [Review 3](review/03.txt)
+What is the free store?
+What other name is commonly used for it?
+What operators support it?
+
+## [Review 4](review/04.txt)
+What is a pointer?
+
+## [Review 5](review/05.txt)
+What is a dereference operator and why do we need one?
+
+## [Review 6](review/06.txt)
+What is an address?
+How are memory addresses manipulated in C++?
+
+## [Review 7](review/07.txt)
+What information about a pointerd-to object does a pointer have?
+What useful information does it lack?
+
+## [Review 8](review/08.txt)
+What can a pointer point to?
+
+## [Review 9](review/09.txt)
+What is a leak?
+
+## [Review 10](review/10.txt)
+What is a resource?
+
+## [Review 11](review/11.txt)
+What is another term for "free store"?
+
+## [Review 12](review/12.txt)
+How can we initialize a pointer?
+
+## [Review 13](review/13.txt)
+What is a null pointer?
+When do we need to use one?
+
+## [Review 14](review/14.txt)
+When do we need a pointer (instead of a reference or a named object)?
+
+## [Review 15](review/15.txt)
+What is a destructor?
+When do we want one?
+
+## [Review 16](review/16.txt)
+When do we want a `virtual` destructor?
+
+## [Review 17](review/17.txt)
+How are destructors for members called?
+
+## [Review 18](review/18.txt)
+How do we access a member of a class through a pointer?
+
+## [Review 19](review/19.txt)
+What is a doubly-linked list?
+
+## [Review 20](review/20.txt)
+What is `this` and when do we need to use it?
+
+
 ## [Exercise 1](exercises/01/main.cpp)
 What is the output format of pointer values on your implementation?
 Hint: Don't read the documentation.
@@ -152,6 +219,6 @@ Why might we want to do that?
 For what kind of examples would it make sense to use a singly-linked list?
 Re-implement that example using only a singly-linked list.
 
-## [Exercise 15](exercises/15/main.cpp)
+## [Exercise 15](exercises/15)
 Look up (e.g, on the Web) _skip list_ and implement that kind of list.
 This is not an easy exercise.
