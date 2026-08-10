@@ -151,3 +151,7 @@ Could the "list of gods" example from §15.7 have been written using a singly-li
 Why might we want to do that?
 For what kind of examples would it make sense to use a singly-linked list?
 Re-implement that example using only a singly-linked list.
+
+## [Exercise 15](exercises/15/main.cpp)
+Look up (e.g, on the Web) _skip list_ and implement that kind of list.
+This is not an easy exercise.
