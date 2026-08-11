@@ -1,0 +1,30 @@
+address            a memory address, points to an object
+destructor         member function that is called implicitly upon the end-of-lifetime of an object
+nullptr            special pointer-constant that points to nothing
+address of: &      operator that yields the address of an object
+free store         also known as the heap / dynamic storage
+pointer            a type that can hold addresses of a given type
+allocation         free store memory resource acquisition
+`Link`             doubly-linked list node
+array              a sequence of objects stored contiguously in the memory;
+                   implicitly decays to a pointer to the first element;
+                   elements are accessed using the subscript[] operator, or by pointer arithmetics
+list               standard library doubly-linked list
+resource leak      a resource the program forgets to release
+dereference: *     used to acquire a pointer's pointed-to object
+vector             standard library dynamic array, resizes itself when necessary, holds its elements in a contiguous sequence
+container          data structure
+member access: ->  used to access a class member through a pointer (same as (*p).mem)
+subscript: []      a shorthand for pointer-arithmetics: { p[0] == *p; p[5] == *(p + 4) }
+deallocation       the act of giving allocated free-store memory back to the OS
+memory             space that we can use for our objects
+`this`             in member functions, yields the address of the current object
+memory corruption  accessing out-of-bounds memory
+`delete`           keyword for destroying and deallocating objects on the free-store
+memory leak        forgetting to deallocate heap-allocated memory
+null pointer       a pointer that has the nullptr constant, in conditions yields false
+`delete[]`         keyword for destroying and deallocating a heap-allocated array
+`new`              keyword for allocating and constructing an object on the heap
+`virtual`          keyword that specifies methods that can be overridden inside derived classes;
+                   used for polymorphism: pointers and references to the static type (base) can call
+                   derived virtual methods based on the dynamic type of the pointer-to/referred-to object
