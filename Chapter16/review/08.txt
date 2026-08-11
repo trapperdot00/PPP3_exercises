@@ -1,0 +1,4 @@
+Range checking catches errors arising from using an
+out-of-range subscript on a built-in array.
+It prevents us from doing so, and avoids buffer overflow /
+range errors.

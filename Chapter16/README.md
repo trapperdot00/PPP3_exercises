@@ -52,3 +52,42 @@ In `main()`:
  - Call `f()` with `gv` as its argument.
  - Define a `vector<int> vv` and initialize it with the first ten factorial values (1, 2*1, 3*2*1, 4*3*2*1, etc.).
  - Call `f()` with `vv` as its argument.
+
+
+## [Review 1](review/01.txt)
+What does "Caveat emptor!" mean?
+
+## [Review 2](review/02.txt)
+What is an array?
+
+## [Review 3](review/03.txt)
+How do you copy an array?
+
+## [Review 4](review/04.txt)
+How do you initialize an array?
+
+## [Review 5](review/05.txt)
+When should you prefer a pointer argument over a reference argument?
+Why?
+
+## [Review 6](review/06.txt)
+When should you prefer a `span` over a pointer?
+Why?
+
+## [Review 7](review/07.txt)
+How does `std::array` differ from a built-in array?
+
+## [Review 8](review/08.txt)
+What good is range-checking?
+
+## [Review 9](review/09.txt)
+What information do you need to do range checking?
+
+## [Review 10](review/10.txt)
+What good can a `not_null` do?
+
+## [Review 11](review/11.txt)
+What is a C-style string?
+
+## [Review 12](review/12.txt)
+What is a palindrome?

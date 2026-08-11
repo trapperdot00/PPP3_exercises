@@ -1,0 +1,14 @@
+We can initialize an array by providing an initializer list
+after its definition:
+
+```
+int ia[10] = {1,2,3,4,5};
+```
+
+If the initializer list contains less elements than what
+the array would hold, the missing elements are
+value-initialized (zero for built-in types, default
+construction for user-defined types).
+
+We cannot initialize an array by providing an existing
+array in the initializer.

@@ -1,0 +1,2 @@
+`not_null` can be used for cases, where we need a pointer
+that cannot be null.

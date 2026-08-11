@@ -1,0 +1,3 @@
+We should prefer using `std::span` instead of plain pointers
+for passing arrays to functions, as `std::span` knows its
+underlying array's size.

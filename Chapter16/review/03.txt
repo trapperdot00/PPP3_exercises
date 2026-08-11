@@ -1,0 +1,50 @@
+We want to copy src's elements to dst:
+
+```
+int src[size] = { /* ... */ };
+int dst[size] = { /* ... */ };
+```
+
+1. We could use indices to iterate over the elements and
+copy them:
+
+```
+for (std::size_t i = 0; i < size; ++i)
+{
+	dst[i] = src[i];
+}
+```
+
+2. Or we could use pointer-arithmetic:
+
+```
+int* s = src;
+int* d = dst;
+for (std::size_t i = 0; i < size; ++i)
+{
+	*d = *s;
+	++s;
+	++d;
+}
+```
+or the same but shorter:
+```
+for (std::size_t i = 0; i < size; ++i)
+{
+	*d++ = *s++;
+}
+```
+
+3. Or we could use the standard-library's `std::copy()`
+function to handle it for us:
+
+```
+std::copy(src, src + size, dst);
+```
+
+4. Or we could use `std::copy_n()` for directly expressing
+the range by size:
+
+```
+std::copy_n(src, size, dst);
+```

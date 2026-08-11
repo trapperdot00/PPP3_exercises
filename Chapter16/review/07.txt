@@ -1,0 +1,5 @@
+`std::array` differs from built-in arrays by knowing its
+size, which is encoded as a template argument in its type.
+
+Deep down, it is implemented as a wrapper over a built-in
+array.

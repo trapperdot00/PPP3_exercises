@@ -1,0 +1,5 @@
+A C-style string is a null-terminated, contiguous sequence
+of characters.
+
+It is an array of characters, where the last character - the
+null terminator ('\0') - signals the end of the string.

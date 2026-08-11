@@ -1,0 +1,2 @@
+We should prefer pointer arguments instead of reference
+arguments to functions that can accept null-objects.

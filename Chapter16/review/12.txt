@@ -1,0 +1,1 @@
+A palindrome is a string that is the same in reverse.

@@ -1,0 +1,8 @@
+An array is a sequence of objects laid contiguously in the
+memory.
+
+C++ inherits C's arrays, which decay to pointers to their
+first elements, and whose sizes aren't stored implicitly.
+
+C++ also provides `std::array` in the standard-library,
+which knows its size, and doesn't decay to pointers.

@@ -1,0 +1,3 @@
+To do range checking, we need to have information about the
+underlying container's size, and the subscript used for
+accessing its element.
