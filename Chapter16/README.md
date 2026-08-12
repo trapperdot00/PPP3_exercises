@@ -111,3 +111,12 @@ Write a function, `int str_cmp(const char* s1, const char* s2)`, that compares C
 Let it return a negative number if `s1` is lexicographically before `s2`.
 Do not use any standard-library functions.
 Do not use subscripting; use the dereference operator `*` instead.
+
+## [Exercise 5](exercises/05/main.cpp)
+Consider what happens if you give your `str_dup()`, `find_x()`, and `str_cmp()` a pointer argument that is not a C-style string.
+Try it!
+First figure out how to get a `char*` that doesn't point to a zero-terminated array of characters and then use it (never do this in real - non-experimental - code; it can create havoc).
+Try it with free-store-allocated and stack-allocated "fake C-style strings."
+If the results still look reasonable, turn off debug mode.
+Redesign and re-implement those three functions so that they take another argument giving the maximum number of elements allowed in argument strings.
+Then, test that with correct C-style strings and "bad" strings.
