@@ -105,3 +105,9 @@ Do not use any standard-library function.
 
 ## [Exercise 3](exercises/03/main.cpp)
 Write a function, `char* find_x(const char* s, const char* x)`, that finds the first occurence of the C-style string `x` in `s`.
+
+## [Exercise 4](exercises/04/main.cpp)
+Write a function, `int str_cmp(const char* s1, const char* s2)`, that compares C-style strings.
+Let it return a negative number if `s1` is lexicographically before `s2`.
+Do not use any standard-library functions.
+Do not use subscripting; use the dereference operator `*` instead.
