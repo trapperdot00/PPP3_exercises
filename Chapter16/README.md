@@ -91,3 +91,10 @@ What is a C-style string?
 
 ## [Review 12](review/12.txt)
 What is a palindrome?
+
+
+## [Exercise 1](exercises/01/main.cpp)
+Write a function, `void to_lower(char* s)`, that replaces all uppercase characters in the C-style string `s` with their lowercase equivalents.
+For example, `Hello, World!` becomes `hello, world!`.
+Do not use any standard-library function.
+A C-style string is a zero-terminated array of characters, so if you find a `char` with the value `0` you are at the end.
