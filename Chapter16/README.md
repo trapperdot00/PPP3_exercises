@@ -102,3 +102,6 @@ A C-style string is a zero-terminated array of characters, so if you find a `cha
 ## [Exercise 2](exercises/02/main.cpp)
 Write a function, `char* str_dup(const char*)`, that copies a C-style string into memory it allocates on the free store.
 Do not use any standard-library function.
+
+## [Exercise 3](exercises/03/main.cpp)
+Write a function, `char* find_x(const char* s, const char* x)`, that finds the first occurence of the C-style string `x` in `s`.
