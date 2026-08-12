@@ -120,3 +120,6 @@ Try it with free-store-allocated and stack-allocated "fake C-style strings."
 If the results still look reasonable, turn off debug mode.
 Redesign and re-implement those three functions so that they take another argument giving the maximum number of elements allowed in argument strings.
 Then, test that with correct C-style strings and "bad" strings.
+
+## [Exercise 6](exercises/06/main.cpp)
+See what happens if you give the standard-library function `strcmp()` a pointer argument that is not a C-style string.
