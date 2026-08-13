@@ -123,3 +123,7 @@ Then, test that with correct C-style strings and "bad" strings.
 
 ## [Exercise 6](exercises/06/main.cpp)
 See what happens if you give the standard-library function `strcmp()` a pointer argument that is not a C-style string.
+
+## [Exercise 7](exercises/07/main.cpp)
+Write a function, `string cat_dot(const char* s1, const char* s2)`, that concatenates two strings with a dot in between.
+For example, `cat_dot("Niels", "Bohr")` will return a string containing `Niels.Bohr`.
