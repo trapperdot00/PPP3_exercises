@@ -133,3 +133,10 @@ Write a version of `cat_dot()` that takes `const string&` arguments.
 
 ## [Exercise 9](exercises/09/main.cpp)
 Modify `cat_dot()` from the previous two exercises to take a string to be used as the separator (rather than dot) as its third argument.
+
+## [Exercise 10](exercises/10/main.cpp)
+Write versions of the `cat_dot()`s from the previous exercises to take C-style strings as arguments and return a free-store-allocated C-style string as the result.
+Do not use standard-library functions or types in the implementation.
+Test these functions with several strings.
+Be sure to free (using `delete`) all the memory you allocated from free store (using `new`).
+Compare the effort involved in this exercise with the effort involved for exercises 5 and 6.
