@@ -127,3 +127,6 @@ See what happens if you give the standard-library function `strcmp()` a pointer 
 ## [Exercise 7](exercises/07/main.cpp)
 Write a function, `string cat_dot(const char* s1, const char* s2)`, that concatenates two strings with a dot in between.
 For example, `cat_dot("Niels", "Bohr")` will return a string containing `Niels.Bohr`.
+
+## [Exercise 8](exercises/08/main.cpp)
+Write a version of `cat_dot()` that takes `const string&` arguments.
