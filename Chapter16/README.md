@@ -130,3 +130,6 @@ For example, `cat_dot("Niels", "Bohr")` will return a string containing `Niels.B
 
 ## [Exercise 8](exercises/08/main.cpp)
 Write a version of `cat_dot()` that takes `const string&` arguments.
+
+## [Exercise 9](exercises/09/main.cpp)
+Modify `cat_dot()` from the previous two exercises to take a string to be used as the separator (rather than dot) as its third argument.
