@@ -143,3 +143,8 @@ Compare the effort involved in this exercise with the effort involved for exerci
 
 ## [Exercise 11](exercises/11/main.cpp)
 Rewrite all the functions in §16.5 (palindromes) to use the approach of making a backward copy of the string and then comparing; for example, take `"home"`, generate `"emoh"`, and compare those two strings to see that they are different, so _home_ isn't a palindrome.
+
+## [Exercise 12](exercises/12/main.cpp)
+Look at the "array solution" to the palindrome problem in §16.5.2.
+Fix it to deal with long strings by (a) reporting if an input string was too long and (b) allowing an arbitrarily long string.
+Comment on the complexity of the two versions.
