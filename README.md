@@ -21,3 +21,4 @@
 ## Part III: Data and Algorithms
 ### [Chapter15](Chapter15/): Vector and Free Store
 ### [Chapter16](Chapter16/): Arrays, Pointers, and References
+### [Chapter17](Chapter17/): Essential Operations
