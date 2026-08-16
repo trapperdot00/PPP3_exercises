@@ -1,0 +1,3 @@
+Non-explicit constructors are preferable when it is sane to
+allow implicit conversions from the defined types to our
+types.

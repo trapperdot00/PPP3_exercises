@@ -1,0 +1,3 @@
+We must copy `std::vector` elements to a new location when
+the elements outgrow the size of the allocated memory.
+(`size()` == `capacity()` and we insert a new element)

@@ -1,0 +1,43 @@
+An explicit constructor is a constructor that prevents
+conversions from happening from other types.
+
+Non-explicit constructors that take one argument define a
+conversion from the parameter type to the to-be-constructed
+type:
+
+```
+class X
+{
+	X(int); // conversion from int to X
+	X(double); // conversion from double to X
+};
+
+void foo(X);
+
+int main()
+{
+	foo(5);    // X::X(int) called for the argument
+	foo(3.14); // X::X(double) called for the argument
+}
+```
+
+Explicit constructors prevent this from happening, however
+users can still call `foo()` using a more explicit notation:
+
+```
+class X
+{
+	explicit X(int);
+	explicit X(double);
+};
+
+void foo(X);
+
+int main()
+{
+	foo(5);       // Error
+	foo(3.14);    // Error
+	foo(X{5});    // OK: X::X(int)
+	foo(X{3.14}); // OK: X::X(double)
+}
+```

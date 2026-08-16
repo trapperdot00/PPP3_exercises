@@ -1,0 +1,9 @@
+Shallow copy is used for classes with reference/pointer
+semantics. It doesn't make a copy of the referred resources
+when using copy operations, it simply copies the handle.
+After a copy operation, the copied-to and copied-from
+objects both refer to the same resources.
+
+Deep copy is used for classes with value semantics. Unlike
+shallow copy, it actually copies the resources in copy
+operations.

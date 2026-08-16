@@ -1,0 +1,3 @@
+`reserve()` allocates space for the given number of
+elements, whereas `resize()` changes the size of the
+`std::vector`.

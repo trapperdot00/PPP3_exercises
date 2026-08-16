@@ -1,0 +1,3 @@
+The value of an `std::vector` after a copy is equal to the
+copied-from `std::vector`, that is their sizes are equal and
+their elements at the corresponding indices are equal.

@@ -1,0 +1,7 @@
+The rule of all means providing all of the special member
+functions:
+ - copy/move construction
+ - copy/move assignment
+ - destructor.
+
+It is required when our classes handle resources explicitly.

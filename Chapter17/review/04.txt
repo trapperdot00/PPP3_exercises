@@ -1,0 +1,7 @@
+Copy assignment is the special member function that is
+invoked when assigning an lvalue to an already existing
+object of the same type.
+
+It usually doesn't modify the assigned-from object (hence it
+usually takes a const T&), it only reads its data to copy
+it over to the assigned-to object.

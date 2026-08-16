@@ -1,0 +1,13 @@
+A copy constructor is used when creating an object from a
+copy of another, while a copy assignment is used when
+assigning an object to an already existing object of the
+same type.
+
+For classes holding resources, copy constructors usually
+don't have to deal with releasing them, as no resource is
+acquired yet, while copy assignment should deal with
+releasing the old resources before making a copy of the new
+resources.
+
+Self-assignment can happen only with assignment operations,
+which should be checked.

@@ -1,0 +1,15 @@
+Container traversal is usually defined using iterator types
+or pointers (using pointer arithmetics for contiguously
+stored elements).
+
+Containers usually provide a `begin()` and `end()` member
+function that return iterators for the first and one past
+the last element.
+
+Providing `begin()` and `end()` lets us use the range-for
+loop:
+
+```
+for (auto item : container)
+{ /* ... */ }
+```

@@ -1,0 +1,7 @@
+The essential operations for a class include
+ - construction
+ - copy construction
+ - copy assignment
+ - move construction
+ - move assignment
+ - destruction

@@ -1,0 +1,2 @@
+For class objects, constructors and destructors may be
+invoked implicitly.

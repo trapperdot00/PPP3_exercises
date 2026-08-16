@@ -1,0 +1,3 @@
+Memberwise copy is appropriate for objects with value
+semantics; inappropriate for objects with pointer/reference
+semantics.

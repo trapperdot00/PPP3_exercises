@@ -1,0 +1,7 @@
+A move assignment is the special member function that is
+invoked when assigning an rvalue to an already existing
+object of the same type.
+
+Move-assigned objects usually "steal" the data from the
+moved-from object, that is, it transfers resources from
+the moved-from object to itself.

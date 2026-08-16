@@ -1,0 +1,7 @@
+A copy constructor copies the copied-from object's data and
+resources, while a move constructor moves the moved-from
+object's data and resources.
+
+Copy constructors usually don't change the copied-from
+object, while move constructors usually put the moved-from
+object into a default-state.

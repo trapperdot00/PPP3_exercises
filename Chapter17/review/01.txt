@@ -1,0 +1,2 @@
+Default meaning of copying for class objects is memberwise
+copy.

@@ -1,0 +1,15 @@
+These operations could change an `std::vector`'s size after its construction:
+
+ - `clear()`: deletes every element
+ - `swap()`: swaps two vectors (if the vectors differ in size)
+ - `push_back()`: inserts a copy of the supplied object to the end
+ - `emplace_back()`: constructs an object with the given arguments to the end
+ - `insert()`: inserts a copy of the supplied object at the specified position
+ - `emplace()`: constructs an object with the given arguments at the specified position
+ - `insert_range()`: inserts the elements of a range at the specified position
+ - `resize()`: adjusts the size of the vector, either deletes elements or default-constructs new elements (if the new size differs from the current size)
+ - `append_range()`: inserts the elements of a range to the end
+ - `pop_back()`: deletes the last element
+ - `erase()`: deletes the element at the specified position
+ - `assign()` / `operator=`: assigns to the vector
+ - `assign_range()`: assigns a range to the vector

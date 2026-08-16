@@ -1,0 +1,21 @@
+Copy elision is done by compilers in certain cases to avoid
+making a copy of an object unnecessarily.
+
+For example, returning a prvalue (temporary) from a function
+constructs the object directly in the initialized storage:
+
+```
+struct X { int a; int b; };
+
+X foo()
+{
+	// no construction here yet
+	return X{1, 2};
+}
+
+int main()
+{
+	// constructed only here
+	X x = foo();
+}
+```

@@ -1,0 +1,7 @@
+A move constructor is the special member function that is
+invoked when initializing an object with an rvalue of the
+same type.
+
+The constructed object usually "steals" the data from the
+moved-from object, that is, it transfers ownership of all
+acquired resources to the constructed object.

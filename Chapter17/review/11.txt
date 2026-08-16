@@ -1,0 +1,4 @@
+The standard library dynamic array, `std::vector` uses value
+semantics, therefore copying it yields an object that is
+equal to the copied-from object: they share the same size
+and the same elements.

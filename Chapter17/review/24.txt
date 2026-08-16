@@ -1,0 +1,2 @@
+No spare space is allocated for a new, default constructed
+`std::vector`.

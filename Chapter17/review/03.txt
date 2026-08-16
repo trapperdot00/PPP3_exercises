@@ -1,0 +1,6 @@
+A copy constructor is the constructor that is invoked when
+initializing an object with an lvalue of the same type.
+
+A copy constructor usually doesn't modify the copied-from
+object (therefore takes a const T&), it only reads its data
+to copy it into the object being initialized.

@@ -1,0 +1,5 @@
+The rule of zero means not providing any special member
+functions to a class.
+It is used when our classes don't have to acquire and
+release resources, or they are handled within data members
+that clean up after themselves.
