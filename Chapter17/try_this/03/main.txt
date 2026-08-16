@@ -1,0 +1,5 @@
+Cases when
+ - newsize is less than 0
+ - newsize is less than the current size
+ - newsize is greater than the current size
+ - newsize is equal to the current size

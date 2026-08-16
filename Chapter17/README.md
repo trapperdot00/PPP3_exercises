@@ -16,6 +16,12 @@ The compilers can be very clever at avoiding unnecessary copies.
 We really mean it: do run this example and try to explain the result.
 If you do, you'll understand most of what there is to know about construction and destruction of objects.
 
+## [Try This 3](try_this/03/main.txt)
+What cases do we need to consider (and test) if we want to convince ourselves that this `resize()` is correct?
+How about `newsize == 0`?
+How about `newsize == -77`?
+
+
 ## [Drill](drill/main.cpp)
 Write a class `Ptr` that has a `double*` private member called `p`.
 Give `Ptr` the essential operations as described in §17.5.
