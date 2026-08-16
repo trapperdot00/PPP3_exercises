@@ -122,3 +122,6 @@ Reject operations on two `Matrix`s with different dimensions.
 If your compiler doesn't allow multiple arguments for `[ ]`, use `( )` instead.
 Store the elements of your `Matrix` in a single `vector`.
 Test `Matrix`.
+
+## [Exercise 2](exercises/02)
+Provide `<<` and `>>` for your `Matrix`.
