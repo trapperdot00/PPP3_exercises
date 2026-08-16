@@ -133,3 +133,7 @@ For example, would you like a `+=` operator?
 What would be a good set of constructors?
 Make a list and give a brief argument for each operation.
 Implement and test your more complete `Matrix`.
+
+## [Exercise 4](exercises/04/main.cpp)
+Implement a `row(i)` member function that returns a `vector` that is a copy of the `i`th row.
+Implement a `column(i)` member function that returns a `vector` that is a copy of the `i`th column.
