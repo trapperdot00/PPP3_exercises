@@ -109,3 +109,16 @@ When must we copy `vector` elements to a new location?
 
 ## [Review 26](review/26.txt)
 What is the value of a `vector` after a copy?
+
+
+## [Exercise 1](exercises/01)
+Define class `Matrix` to represent a two-dimensional matrix of `doubles`.
+A constructor should take two integer arguments specifying the number of rows and columns, e.g., `Matrix{3,4}` has 3 rows and 4 columns.
+Provide `Matrix` with operators `=` (assignment), `==` (equality), `[ ]` (subscript), and `+` (addition of corresponding elements).
+The subscript operator should take a pairs of indices, e.g., `m[2, 3]` yields the element 3 of the 2nd row.
+Indexing should be zero-based.
+Range check your indices.
+Reject operations on two `Matrix`s with different dimensions.
+If your compiler doesn't allow multiple arguments for `[ ]`, use `( )` instead.
+Store the elements of your `Matrix` in a single `vector`.
+Test `Matrix`.

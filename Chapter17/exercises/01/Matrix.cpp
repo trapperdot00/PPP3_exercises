@@ -1,0 +1,107 @@
+#include "Matrix.hpp"
+
+#include <stdexcept>
+#include <utility>
+
+Matrix::Matrix(unsigned rows, unsigned columns) :
+	rows_{rows},
+	cols_{columns},
+	data_(rows_ * columns)
+{}
+
+Matrix::Matrix(const Matrix& other) :
+	rows_{other.rows_},
+	cols_{other.cols_},
+	data_{other.data_}
+{}
+
+Matrix::Matrix(Matrix&& other) :
+	rows_{other.rows_},
+	cols_{other.cols_},
+	data_{std::move(other.data_)}
+{}
+
+namespace
+{
+	inline bool dimensions_differ(const Matrix& a, const Matrix& b)
+	{
+		return a.row_count() != b.row_count()
+			|| a.column_count() != b.column_count();
+	}
+	inline void throw_if_dimensions_differ(const Matrix& a, const Matrix& b, const char* error_msg)
+	{
+		if (dimensions_differ(a, b))
+			throw std::invalid_argument{error_msg};
+	}
+}
+
+Matrix& Matrix::operator=(const Matrix& other)
+{
+	throw_if_dimensions_differ(*this, other, "assigned Matrix differs in dimensions");
+	data_ = other.data_;
+	return *this;
+}
+
+Matrix& Matrix::operator=(Matrix&& other)
+{
+	throw_if_dimensions_differ(*this, other, "assigned Matrix differs in dimensions");
+	data_ = std::move(other.data_);
+	return *this;
+}
+
+#if __cplusplus > 202002L
+double& Matrix::operator[](unsigned row, unsigned column)
+{
+	return this->operator()(row, column);
+}
+
+const double& Matrix::operator[](unsigned row, unsigned column) const
+{
+	return this->operator()(row, column);
+}
+#endif
+
+double& Matrix::operator()(unsigned row, unsigned column)
+{
+	return data_[to_index(row, column)];
+}
+
+const double& Matrix::operator()(unsigned row, unsigned column) const
+{
+	return data_[to_index(row, column)];
+}
+
+unsigned Matrix::to_index(unsigned row, unsigned column) const
+{
+	if (row >= rows_ || column >= cols_)
+		throw std::out_of_range{"index out of range"};
+	return (row * cols_) + column;
+}
+
+bool operator==(const Matrix& a, const Matrix& b)
+{
+	if (dimensions_differ(a, b))
+		return false;
+	FOR_EACH_INDEX(a)
+	{
+		if (a(row, col) != b(row, col))
+			return false;
+	}
+	return true;
+}
+
+bool operator!=(const Matrix& a, const Matrix& b)
+{
+	return !(a == b);
+}
+
+Matrix operator+(const Matrix& a, const Matrix& b)
+{
+	throw_if_dimensions_differ(a, b, "Matrix sizes differ for 'operator+'");
+	Matrix result{a.row_count(), a.column_count()};
+	FOR_EACH_INDEX(a)
+	{
+		result(row, col) = a(row, col) + b(row, col);
+	}
+	return result;
+}
