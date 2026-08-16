@@ -1,0 +1,23 @@
+`reserve()`             `std::vector` member function that reserves storage for at least n elements
+deep copy               value like semantics copy, that copies the held resources' values
+shallow copy            reference/pointer like semantics copy that copies the handles to the resources
+move assignment         assignment operator that steals the right side object's resources
+capacity                `std::vector` member function that returns the number of elements that it can hold without a reallocation
+default constructor     constructor that is called when providing no initializer or an initializer with no elements
+move construction       constructor that steals the provided object's resources
+list initialization     initialization using an `std::initializer_list<T>`
+copy assignment         assignment operator that copies the right side object's resources
+essential operations    constructor, copy/move constructor, copy/move assignment, destructor
+`begin()`               returns an iterator to the first element in the container
+`end()`                 returns an iterator to one past the last element in the container
+copy constructor        initializes by copying the resources of the provided object
+`explicit` constructor  constructor that must be called explicitly, prohibits implicit conversions
+`&&`                    logical and
+`push_back()`           `std::vector` method that creates a copy of the provided object at the end of the container, can result in a reallocation (and iterator invalidation)
+`resize()`              `std::vector` method that changes the size of the container, can delete elements, or default construct new elements
+size                    returns the size of a container
+comparison              we can compare two `std::vector`s
+traversal               we traverse containers using iterators
+rule of zero            if we have no manual resource handling, don't write special member functions
+rule of all             if we have manual resource handling, do write all special member functions
+`==` and `!=`           equality and inequality
