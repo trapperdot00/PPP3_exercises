@@ -125,3 +125,11 @@ Test `Matrix`.
 
 ## [Exercise 2](exercises/02)
 Provide `<<` and `>>` for your `Matrix`.
+
+## [Exercise 3](exercises/03)
+Make the representation of `Matrix` private.
+What would be a more complete set of members for `Matrix`?
+For example, would you like a `+=` operator?
+What would be a good set of constructors?
+Make a list and give a brief argument for each operation.
+Implement and test your more complete `Matrix`.
