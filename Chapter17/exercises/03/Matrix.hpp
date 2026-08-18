@@ -31,7 +31,7 @@ public:
 	Matrix& operator%=(const Matrix& other);
 
 	template <typename Func>
-	Matrix& apply(const Matrix& other, Func f)
+	Matrix& apply_elementwise(const Matrix& other, Func f)
 	{
 		throw_if_dimensions_differ(other);
 		for (unsigned row = 0; row < row_count(); ++row)

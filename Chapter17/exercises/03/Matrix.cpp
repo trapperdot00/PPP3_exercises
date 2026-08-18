@@ -72,27 +72,31 @@ unsigned Matrix::to_index(unsigned row, unsigned column) const
 
 Matrix& Matrix::operator+=(const Matrix& other)
 {
-	return apply(other, std::plus<double>{});
+	return apply_elementwise(other, std::plus<double>{});
 }
 
 Matrix& Matrix::operator-=(const Matrix& other)
 {
-	return apply(other, std::minus<double>{});
+	return apply_elementwise(other, std::minus<double>{});
 }
 
 Matrix& Matrix::operator*=(const Matrix& other)
 {
-	return apply(other, std::multiplies<double>{});
+	Matrix tmp = *this * other;
+	rows_ = tmp.rows_;
+	cols_ = tmp.cols_;
+	data_ = std::move(tmp.data_);
+	return *this;
 }
 
 Matrix& Matrix::operator/=(const Matrix& other)
 {
-	return apply(other, std::divides<double>{});
+	return apply_elementwise(other, std::divides<double>{});
 }
 
 Matrix& Matrix::operator%=(const Matrix& other)
 {
-	return apply(other, [](double a, double b) { return std::fmod(a, b); });
+	return apply_elementwise(other, [](double a, double b) { return std::fmod(a, b); });
 }
 
 bool dimensions_differ(const Matrix& a, const Matrix& b)
@@ -139,8 +143,19 @@ Matrix operator-(const Matrix& a, const Matrix& b)
 
 Matrix operator*(const Matrix& a, const Matrix& b)
 {
-	Matrix result{a};
-	result *= b;
+	if (a.column_count() != b.row_count())
+		throw std::invalid_argument{"Matrix with invalid dimensions for multiplication"};
+	Matrix result{a.row_count(), b.column_count()};
+	for (unsigned row = 0; row < result.row_count(); ++row)
+	{
+		for (unsigned col = 0; col < result.column_count(); ++col)
+		{
+			double acc = 0;
+			for (unsigned k = 0; k < a.column_count(); ++k)
+				acc += a(row, k) * b(k, col);
+			result(row, col) = acc;
+		}
+	}
 	return result;
 }
 
