@@ -11,3 +11,6 @@ Add `try`-blocks to this last example to ensure that all resources are properly 
 
 ## [Drill 1](drill/01/main.cpp)
 Define `template <typename T> struct S { T val; };`.
+
+## [Drill 2](drill/02/main.cpp)
+Add a constructor, so that you can initialize with a `T`.
