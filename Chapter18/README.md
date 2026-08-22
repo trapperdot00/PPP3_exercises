@@ -14,3 +14,6 @@ Define `template <typename T> struct S { T val; };`.
 
 ## [Drill 2](drill/02/main.cpp)
 Add a constructor, so that you can initialize with a `T`.
+
+## [Drill 3](drill/03/main.cpp)
+Define variables of types `S<int>`, `S<char>`, `S<double>`, `S<string>`, and `S<vector<int>>`; initialize them with values of your choice.
