@@ -20,3 +20,6 @@ Define variables of types `S<int>`, `S<char>`, `S<double>`, `S<string>`, and `S<
 
 ## [Drill 4](drill/04/main.cpp)
 Read those values and print them.
+
+## [Drill 5](drill/05/main.cpp)
+Make `val` private.
