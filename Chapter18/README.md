@@ -17,3 +17,6 @@ Add a constructor, so that you can initialize with a `T`.
 
 ## [Drill 3](drill/03/main.cpp)
 Define variables of types `S<int>`, `S<char>`, `S<double>`, `S<string>`, and `S<vector<int>>`; initialize them with values of your choice.
+
+## [Drill 4](drill/04/main.cpp)
+Read those values and print them.
