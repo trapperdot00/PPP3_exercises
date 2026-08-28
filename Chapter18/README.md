@@ -23,3 +23,6 @@ Read those values and print them.
 
 ## [Drill 5](drill/05/main.cpp)
 Make `val` private.
+
+## [Drill 6](drill/06/main.cpp)
+Add a member function `access()` that returns a reference to `val`.
