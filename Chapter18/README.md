@@ -29,3 +29,6 @@ Add a member function `access()` that returns a reference to `val`.
 
 ## [Drill 7](drill/07/main.cpp)
 Put the definition of `access()` outside the class.
+
+## [Drill 8](drill/08/main.cpp)
+Do 4 again using `access()`.
