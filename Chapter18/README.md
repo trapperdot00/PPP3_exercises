@@ -26,3 +26,6 @@ Make `val` private.
 
 ## [Drill 6](drill/06/main.cpp)
 Add a member function `access()` that returns a reference to `val`.
+
+## [Drill 7](drill/07/main.cpp)
+Put the definition of `access()` outside the class.
