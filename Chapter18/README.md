@@ -45,3 +45,8 @@ Define a function `template <typename T> read_val(T& v)` that reads from `cin` i
 
 ## [Drill 12](drill/12/main.cpp)
 Use `read_val()` to read into each of the variables from exercise 3 except the `S<vector<int>>` variable.
+
+## [Drill 13](drill/13/main.cpp)
+Bonus: Define input and output operators (`>>` and `<<`) for `vector<T>`s.
+For both input and output use a `{ val, val, val }` format.
+That will allow `read_val()` to also handle the `S<vector<int>>` variable.
