@@ -103,3 +103,6 @@ What is `shared_ptr` good for?
 
 ## [Exercise 1](exercises/01/main.cpp)
 Write a template function `add()` that adds the elements of one `vector<T>` to the elements of another; for example, `add(v1, v2)` should do `v1[i] += v2[i]` for each element of `v1`.
+
+## [Exercise 2](exercises/02/main.cpp)
+Write a template function that takes a `vector<T> vt` and a `vector<U> vu` as arguments and returns the sum of all `vt[i] * vu[i]`s.
