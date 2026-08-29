@@ -32,3 +32,7 @@ Put the definition of `access()` outside the class.
 
 ## [Drill 8](drill/08/main.cpp)
 Do 4 again using `access()`.
+
+## [Drill 9](drill/09/main.cpp)
+Add a `S<T>::operator=(const T&)`.
+Hint: Much simpler than §17.8.5.
