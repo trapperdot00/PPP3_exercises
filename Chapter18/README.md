@@ -36,3 +36,6 @@ Do 4 again using `access()`.
 ## [Drill 9](drill/09/main.cpp)
 Add a `S<T>::operator=(const T&)`.
 Hint: Much simpler than §17.8.5.
+
+## [Drill 10](drill/10/main.cpp)
+Provide `const` and non-`const` versions of `access()`.
