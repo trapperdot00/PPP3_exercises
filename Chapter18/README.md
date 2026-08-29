@@ -39,3 +39,6 @@ Hint: Much simpler than §17.8.5.
 
 ## [Drill 10](drill/10/main.cpp)
 Provide `const` and non-`const` versions of `access()`.
+
+## [Drill 11](drill/11/main.cpp)
+Define a function `template <typename T> read_val(T& v)` that reads from `cin` into `v`.
