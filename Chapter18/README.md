@@ -42,3 +42,6 @@ Provide `const` and non-`const` versions of `access()`.
 
 ## [Drill 11](drill/11/main.cpp)
 Define a function `template <typename T> read_val(T& v)` that reads from `cin` into `v`.
+
+## [Drill 12](drill/12/main.cpp)
+Use `read_val()` to read into each of the variables from exercise 3 except the `S<vector<int>>` variable.
