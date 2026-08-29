@@ -1,0 +1,11 @@
+`resize()` changes the size of the vector, that is, if the
+given argument is less than the current size, elements are
+deleted from the end; if however the arguments is greater
+then the current size, it default-constructs new elements at
+the end, or using a copy of the given value.
+`resize()` can reallocate the vector using `reserve()`.
+
+`reserve()` changes the capacity of the vector, if the
+current capacity is less than the argument given, it
+allocates a new chunk of memory and moves the elements into
+it.

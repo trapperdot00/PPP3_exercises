@@ -1,0 +1,2 @@
+Generic programming is resolved at compile-time, whereas
+object-oriented programming is resolved at run-time.

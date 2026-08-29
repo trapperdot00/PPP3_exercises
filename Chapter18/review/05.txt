@@ -1,0 +1,8 @@
+Concepts provide a way to constrain our template parameters
+to conform to an interface we expect.
+
+For example, we could accept types that can be
+default-constructed inside a function.
+
+Concepts were added in C++20, SFINAE was used before C++20
+(usually with the `std::enable_if` metafunction).

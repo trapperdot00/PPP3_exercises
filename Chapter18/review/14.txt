@@ -1,0 +1,5 @@
+`unique_ptr` is a RAII wrapper for a pointer, that is, it
+implicitly deletes its allocated memory.
+
+It can be used as a safe alternative for built-in pointers
+to resources.

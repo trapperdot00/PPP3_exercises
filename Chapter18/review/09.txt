@@ -1,0 +1,11 @@
+A resource is a thing that is acquired and must be given
+back after done with it.
+
+Failing to release a resource is an error.
+
+Resources can be:
+ - memory
+ - file handles
+ - thread handles
+ - locks
+ - sockets

@@ -1,0 +1,9 @@
+`std::same_as<T, U>`: satisfied if T and U is the same type
+
+`std::constructible_from<T, Args...>`: satisfied if T can be
+constructed from Args... as arguments
+
+`std::invocable<F, Args...>`: satisfied if F can be invoked
+using Args... as arguments
+
+`std::integral<T>`: satisfied if T is an integral type

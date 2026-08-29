@@ -1,0 +1,5 @@
+Because it is useful to have lists of any types.
+
+It would be rather annoying to rewrite our dynamic-array
+implementations for every kind of element-type we want to
+store within them.

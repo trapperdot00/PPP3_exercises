@@ -1,0 +1,5 @@
+Using concepts instead of SFINAE, we get better error
+messages.
+
+Using SFINAE or concepts provide a way for us to set
+constraints on our template parameters.

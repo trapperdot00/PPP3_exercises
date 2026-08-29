@@ -50,3 +50,52 @@ Use `read_val()` to read into each of the variables from exercise 3 except the `
 Bonus: Define input and output operators (`>>` and `<<`) for `vector<T>`s.
 For both input and output use a `{ val, val, val }` format.
 That will allow `read_val()` to also handle the `S<vector<int>>` variable.
+
+
+## [Review 1](review/01.txt)
+Why would we want to have different element types for different `vector`s?
+
+## [Review 2](review/02.txt)
+What is a template?
+
+## [Review 3](review/03.txt)
+what is generic programming?
+
+## [Review 4](review/04.txt)
+How does generic programming differ from object-oriented programming?
+
+## [Review 5](review/05.txt)
+What is a concept?
+
+## [Review 6](review/06.txt)
+What benefits do we get from the use of concepts?
+
+## [Review 7](review/07.txt)
+Name four standard-library concepts.
+
+## [Review 8](review/08.txt)
+How does `resize()` differ from `reserve()`?
+
+## [Review 9](review/09.txt)
+What is a resource?
+Define and give examples.
+
+## [Review 10](review/10.txt)
+What is a resource leak?
+
+## [Review 11](review/11.txt)
+List the three resource-management guarantees.
+
+## [Review 12](review/12.txt)
+How can the use of a built-in pointer lead to a resource leak?
+Give examples.
+
+## [Review 13](review/13.txt)
+What is RAII?
+What problem does it address?
+
+## [Review 14](review/14.txt)
+What is `unique_ptr` good for?
+
+## [Review 15](review/15.txt)
+What is `shared_ptr` good for?

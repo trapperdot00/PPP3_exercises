@@ -1,0 +1,8 @@
+A resource leak occurs when we fail to release an acquired
+resource after done with using it.
+
+It can cause:
+ - memory leaks for memory resource leaks
+ - deadlocks for lock resource leaks
+ - unsynchronized file modifications for file handle resource
+   leaks

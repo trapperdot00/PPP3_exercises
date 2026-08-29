@@ -1,0 +1,5 @@
+`shared_ptr` is a RAII pointer to a reference counted
+resource.
+
+Its pointed-to resource is automatically released if no
+`shared_ptr`s are pointing to it.

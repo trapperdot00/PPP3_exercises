@@ -1,0 +1,28 @@
+A template is a blueprint for the compiler to generate
+functions, structs/classes, variables or concepts based on
+compile-time type or value parameters.
+
+A template entity whose template parameters are substituted
+with the actual parameters (template arguments) are called
+template specializations.
+
+Templates are an inherently compile-time feature of C++,
+that is, we cannot instantiate new, uninstantiated template
+entities at run-time.
+
+Templates are proven to be turing-complete, we can have
+programs executing at compile-time using template
+metaprogramming, which can be thought of as a functional
+language within C++.
+
+The first template metaprogram ever written is a program
+that calculates prime numbers written by Erwin Unruh.
+
+Template metaprogramming allows us to have metafunctions
+that calculate types or values based on our given
+parameters.
+
+Compile-time computations of values nowadays can be replaced
+from value-producing template-metaprograms with
+constexpr/consteval functions, which better conform to the
+usual C++ syntax that users are already familiar with.

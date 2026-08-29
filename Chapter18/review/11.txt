@@ -1,0 +1,12 @@
+Resource-management guarantees:
+
+1. Basic guarantee:
+An operation either succeeds or throws an exception.
+No resource is leaked either way.
+
+2. Strong guarantee:
+Basic guarantee + all observable values are the same as
+before the call if an exception is thrown.
+
+3: No-throw guarantee:
+The operation can be completed without throwing exceptions.

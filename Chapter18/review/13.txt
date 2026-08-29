@@ -1,0 +1,9 @@
+RAII means Resource Acquisition Is Initialization.
+
+It refers to resource handling via classes that acquire
+resources inside their constructors, and releasing these
+resources inside their destructors.
+
+Using RAII solves resource leaks, as destructors for objects
+are always called when their lifetimes end, whether by
+normal exiting, or by an exception.

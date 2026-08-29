@@ -1,0 +1,23 @@
+Built-in pointers could easily lead to a resource leak, as
+exceptions could exit the function before releasing the
+acquired memory.
+
+For example:
+
+```
+void randomly_throw();
+
+void foo()
+{
+	int* data = new int[100];
+	randomly_throw();
+	delete[] data;
+}
+```
+
+`foo()` could leak memory, as after acquiring memory on the
+free-store, an exception can be thrown before releasing it.
+
+We can fix this by wrapping the allocation inside a class:
+allocating resources inside its constructor, and releasing
+inside its destructor.

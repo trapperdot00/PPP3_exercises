@@ -1,0 +1,7 @@
+Generic programming is writing code that works with any
+type that meet specific syntactic and semantic requirements.
+
+In C++ generic programming is supported by templates.
+
+Generic programming using templates is also called
+parametric polymorphism.
