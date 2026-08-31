@@ -114,3 +114,8 @@ Use this to implement a simple symbol table like the one we used in the calculat
 ## [Exercise 4](exercises/04/main.cpp)
 Modify class `Link` from §15.7 to be a template with the type of value as the template argument.
 Then redo exercise 13 from Chapter 16 with `Link<God>`.
+
+## [Exercise 5](exercises/05)
+Define a class `Int` having a single member of class `int`.
+Define constructors, assignment, and operators `+`, `-`, `*`, `/` for it.
+Test it, and improve its design as needed (e.g., define operators `<<` and `>>` for convenient I/O).
