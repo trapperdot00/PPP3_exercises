@@ -106,3 +106,7 @@ Write a template function `add()` that adds the elements of one `vector<T>` to t
 
 ## [Exercise 2](exercises/02/main.cpp)
 Write a template function that takes a `vector<T> vt` and a `vector<U> vu` as arguments and returns the sum of all `vt[i] * vu[i]`s.
+
+## [Exercise 3](exercises/03/main.cpp)
+Write a template class `Pair` that can hold a pair of values of any type.
+Use this to implement a simple symbol table like the one we used in the calculator (§6.8).
