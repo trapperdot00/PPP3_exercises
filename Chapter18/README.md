@@ -110,3 +110,7 @@ Write a template function that takes a `vector<T> vt` and a `vector<U> vu` as ar
 ## [Exercise 3](exercises/03/main.cpp)
 Write a template class `Pair` that can hold a pair of values of any type.
 Use this to implement a simple symbol table like the one we used in the calculator (§6.8).
+
+## [Exercise 4](exercises/04/main.cpp)
+Modify class `Link` from §15.7 to be a template with the type of value as the template argument.
+Then redo exercise 13 from Chapter 16 with `Link<God>`.
